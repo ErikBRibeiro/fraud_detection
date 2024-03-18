@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Fraud Detection result</h1>
+    <div class="resultado">
+        {% for client_id, result in resultados.items() %}
+            <p>{{ result }}</p>
+        {% endfor %}
+    </div>
+    <a href="/">Try other bet</a>
+</body>
+</html>

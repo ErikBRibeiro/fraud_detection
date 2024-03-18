@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud detection in bets</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Fraud detection model</h1>
+    <form action="/predict" method="post">
+
+        <label for="live">Live:</label>
+        <input type="text" id="live" name="live" required><br><br>
+
+        <label for="valor">Value:</label>
+        <input type="number" id="valor" name="valor" required step="any"><br><br>
+
+        <label for="odd">Odd:</label>
+        <input type="number" id="odd" name="odd" required step="any"><br><br>
+
+        <label for="cashouted">Cashouted:</label>
+        <input type="text" id="cashouted" name="cashouted" required><br><br>
+
+        <input type="submit" value="Verificar Fraude">
+    </form>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
